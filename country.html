@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#app{
+				margin-left:800px;
+				margin-top: 450px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="userNumber" name="" id="" value="" />
+			<div  v-for="country in countries">
+				<div v-if="userNumber==country.num">
+				国家编号为：{{country.num}}<br>
+				国家名称为：{{country.name}}<br>
+				国家首都为：{{country.center}}<br>
+				</div>
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			let v = new Vue({
+				el:'#app',
+				data:{
+					userNumber:'86',
+					
+					countries:[
+						{num:"1",name:"美国",center:"华盛顿"},
+						{num:"86",name:"中国",center:"北京"},
+						{num:"33",name:"法国",center:"巴黎"},
+						{num:"44",name:"英国",center:"伦敦"},
+						{num:"960",name:"马尔代夫",center:"马累"},
+						
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
