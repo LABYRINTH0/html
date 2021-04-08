@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		{{chooseStudent}}
+		<input type="button" @click="rdm=Math.ceil(Math.random()*20)%5+1;chooseStudent=luckymans[rdm]" name="" id="" value="按它" />
+		<div v-for="luckyman in luckymans">
+			
+		</div>
+		</div>
+		<script type="text/javascript">
+			let v = new Vue({
+				el:'#app',
+				data:{
+					rdm:'',
+					chooseStudent:'',
+					luckymans:[
+						{name:"张三",sex:"男",age:"20"},
+						{name:"李四",sex:"男",age:"21"},
+						{name:"王五",sex:"女",age:"17"},
+						{name:"赵六",sex:"男",age:"22"},
+						{name:"小红",sex:"女",age:"19"},
+						
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
