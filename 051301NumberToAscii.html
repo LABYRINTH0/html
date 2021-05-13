@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="message" @keydown.enter="show()" name="" id="" value="" />
+
+		</div>
+		<script type="text/javascript">
+			let vm = new Vue({
+				el:'#app',
+				data:{
+					message:''
+				},
+				methods:{
+					show(){
+						alert(vm.message.charCodeAt());
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

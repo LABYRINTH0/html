@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="one" @keydown.enter="show()" name="" id="" value="" />
+		</div>
+		<script type="text/javascript">
+			let vm = new Vue({
+				el:'#app',
+				data:{
+					one:'',
+					num:Math.ceil(Math.random()*10)
+				},
+				methods:{
+					show(){
+						if(this.one == this.num)
+						{
+							alert('恭喜您猜中了')
+						}
+						else if(this.one>this.num){
+							alert("猜大了!");
+						}
+						else if(this.one<this.num){
+							alert("猜小了!");
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
